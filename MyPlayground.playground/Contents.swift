@@ -1,9 +1,39 @@
 import UIKit
 class Solution {
+    func bubbleSort(_ list: inout [Int]) {
+        guard list.count > 1 else {
+           return
+        }
+        for i in 0 ..< list.count {
+            for j in i + 1 ..< list.count {
+                let a = list[i]
+                let b = list[j]
+                if b < a {
+                    list[i] = b
+                    list[j] = a
+                } else {/* do nothing*/}
+            }
+        }
+    }
+        
+    /// 选择排序
+    func selectionSort(_ list: inout [Int]) {
+        for j in 0 ..< list.count - 1 {
+            var minIndex = j
+            for i in j ..< list.count {
+                if list[minIndex] > list[i] {
+                    minIndex = i
+                }
+            }
+            list.swapAt(j, minIndex)
+        }
+    }
+    
+    
     // 从排序数组中删除重复项
     func removeDuplicates(_ nums: inout [Int]) -> Int {
         // 空数组 和 一个元素的数组
-        if nums.count <= 1 {
+        if nums.count < 2 {
             return nums.count
         }
         var numbers: Int = 0
@@ -14,6 +44,40 @@ class Solution {
             }
         }
         return numbers + 1
+    }
+        // 双指针
+//        if nums.count < 2 {
+//            return nums.count
+//        }
+//        var fast = 1
+//        var slow = 1
+//        while fast < nums.count {
+//            if nums[fast] != nums[fast-1] {
+//                nums[slow] = nums[fast]
+//                slow += 1
+//            }
+//            fast += 1
+//        }
+//        return slow
+
+    // 最大利润
+    func maxProfit(_ prices: [Int]) -> Int {
+        /* 一次遍历 不可用
+        var minPrice: Int = Int.max
+        var maxProfit: Int = Int.min
+        for p in prices {
+            if (p < minPrice) {
+                minPrice = p
+            } else if (p - minPrice > maxProfit) {
+                maxProfit = p - minPrice
+            }
+        }
+        return maxProfit
+        */
+        // 1. 暴力搜索
+        // 2. 动态规划
+        // 3. 贪心算法
+        return 0
     }
     
     //
@@ -100,6 +164,10 @@ class Solution {
     
 }
 var arrays: [Int] = [2, 0, 12, 2, 0, 3]
+print(arrays)
+Solution().selectionSort(&arrays)
+print(arrays)
+print(Solution().removeDuplicates(&arrays))
 print(arrays)
 Solution().moveZeroes(&arrays)
 print(arrays)

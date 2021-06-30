@@ -246,8 +246,10 @@
 		3B056775228D4E0800B56F05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PV4F4A3PV9;
+				DEVELOPMENT_TEAM = FBCH2LYD8Q;
+				PRODUCT_BUNDLE_IDENTIFIER = leetcode.ding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -257,7 +259,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PV4F4A3PV9;
+				DEVELOPMENT_TEAM = FBCH2LYD8Q;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
