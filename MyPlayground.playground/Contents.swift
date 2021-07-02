@@ -60,7 +60,7 @@ class Solution {
 //        }
 //        return slow
 
-    // 最大利润
+    // 最大利润初级
     func maxProfit(_ prices: [Int]) -> Int {
         /* 一次遍历 不可用
         var minPrice: Int = Int.max
@@ -80,7 +80,18 @@ class Solution {
         return 0
     }
     
-    //
+    // 旋转数组
+    func rotate(_ nums: inout [Int], _ k: Int) {
+
+    }
+    
+    //爬楼梯
+    func climbStairs(_ n: Int) -> Int {
+        return 1
+    }
+    
+    
+    // 两个数组中重复的元素
     func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
         let len1 = nums1.count
         let len2 = nums2.count
