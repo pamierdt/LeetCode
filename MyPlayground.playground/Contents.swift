@@ -60,7 +60,7 @@ class Solution {
 //        }
 //        return slow
 
-    // 最大利润初级
+    // 最大利润
     func maxProfit(_ prices: [Int]) -> Int {
         /* 一次遍历 不可用
         var minPrice: Int = Int.max
@@ -72,11 +72,14 @@ class Solution {
                 maxProfit = p - minPrice
             }
         }
+         
         return maxProfit
         */
         // 1. 暴力搜索
         // 2. 动态规划
         // 3. 贪心算法
+        var result: [Int] = []
+
         return 0
     }
     
